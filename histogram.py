@@ -96,6 +96,14 @@ def main():
 
     plt.show()
 
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    weights = np.ones_like(ws) / len(ws)
+    ax.hist(ws, bins=50, weights=weights, color='g', alpha=0.3)
+    ax.grid()
+
+    plt.show()
+
 
 if __name__ == '__main__':
     sys.exit(main())
